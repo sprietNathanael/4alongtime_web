@@ -28,20 +28,20 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
 
-    <nav class="navbar navbar-expand-md fixed-top">
+    <nav class="navbar navbar-expand-md fixed-top" id="navbar">
         <a class="navbar-brand" href="#">4aLongTime</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse justify-content-stretch" id="navbarCollapse">
-            <ul class="navbar-nav ml-auto">
+            <ul class="nav nav-pills ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#myCarousel">Présentation</a>
+                    <a class="nav-link" href="#presentation">Présentation</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Equipage">L'équipage</a>
+                    <a class="nav-link" href="#team">L'équipage</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Budget">Notre Budget</a>
@@ -67,7 +67,7 @@
 
     </section>
 
-    <section class="module content">
+    <section class="module content" id="presentation">
         <div class="parallax-container">
             <h2>Lorem Ipsum Dolor</h2>
             <p>Lorem ipsum dolor...</p>
@@ -75,6 +75,20 @@
     </section>
 
     <section class="module parallax" id="second_parallax" data-type="background" data-speed="3" data-offset="200">
+        <div class="parallax-container">
+            <h1>Test</h1>
+        </div>
+
+    </section>
+
+    <section class="module content" id="team">
+        <div class="parallax-container">
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor...</p>
+        </div>
+    </section>
+
+    <section class="module parallax" id="third_parallax" data-type="background" data-speed="3" data-offset="450">
         <div class="parallax-container">
             <h1>Test</h1>
         </div>

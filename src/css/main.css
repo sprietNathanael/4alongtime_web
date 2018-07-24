@@ -12,6 +12,10 @@ html {
     transition: padding-top 200ms, background 500ms;
 }
 
+.nav-pills .nav-link.active {
+    background: rgba(145, 145, 145, 0.267);
+}
+
 .navbar a {
     color: white;
 }

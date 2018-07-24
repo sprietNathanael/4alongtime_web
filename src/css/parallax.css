@@ -81,7 +81,7 @@ section.module.parallax h3 {
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
-    /* padding: 40vh 0; */
+    padding: 40vh 0;
 }
 
 #second_parallax {
@@ -90,8 +90,14 @@ section.module.parallax h3 {
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
-    /* background-color: rgba(0, 123, 255, 0.4); */
-    /* background-blend-mode: screen; */
+}
+
+#third_parallax {
+    background-image: url("../img/trophy_4l_05.jpg");
+    background-position: 50% 0;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 
