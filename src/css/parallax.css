@@ -84,16 +84,33 @@ section.module.parallax h3 {
     padding: 40vh 0;
 }
 
-#second_parallax {
-    background-image: url("../img/trophy_4l_02.jpg");
+#presentation .parallax-container{
+    margin: 0 0;
+}
+
+
+#presentation img{
+    width: 100%;
+}
+
+#presentation_2 {
+    background-image: url("../img/trophy_4l_10.jpg");
     background-position: 50% 0;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 
-#third_parallax {
-    background-image: url("../img/trophy_4l_05.jpg");
+#presentation_2 .jumbotron {
+    width:50%;
+    background: rgba(68, 68, 68, 0.61);
+    color:  white;
+    margin-left: 5%;
+    border-radius: 45px;
+}
+
+#team {
+    background-image: url("../img/IMG_3038-2.jpg");
     background-position: 50% 0;
     background-repeat: repeat;
     background-attachment: fixed;

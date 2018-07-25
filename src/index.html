@@ -36,6 +36,11 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse justify-content-stretch" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <p id="timeCounter"><span id="counter_d"></span> J - <span id="counter_h"></span> : <span id="counter_m"></span> : <span id="counter_s"></span></p>
+                </li>
+            </ul>
             <ul class="nav nav-pills ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#presentation">Présentation</a>
@@ -68,29 +73,53 @@
     </section>
 
     <section class="module content" id="presentation">
-        <div class="parallax-container">
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor...</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 offset-md-1">
+                    <img src="./img/enfatnsDesert.jpg" alt="enfantsDuDesert">
+                </div>
+                <div class="col-md-6">
+                    <h2>Un raid humanitaire</h2>
+                    <p>Le Raid 4L Trophy est avant tout une démarche solidaire et éco-citoyenne.</p>
+                    <p>À bord de notre 4L, nous allons amener du matériel scolaire aux enfants les plus démunis du Maroc.</p>
+                </div>
+                <!-- <p>Mais pour compléter cet effort de solidarité, un des objectifs de 4aLongTime est d'amener des notions de secourisme aux enfants avec le partenariat de l'association "Enfants du désert" grâce à nos compétences dans ce secteur.</p> -->
+            </div>
         </div>
     </section>
 
-    <section class="module parallax" id="second_parallax" data-type="background" data-speed="3" data-offset="200">
-        <div class="parallax-container">
-            <h1>Test</h1>
-        </div>
-
-    </section>
-
-    <section class="module content" id="team">
-        <div class="parallax-container">
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor...</p>
+    <section class="module parallax" id="presentation_2" data-type="background" data-speed="3" data-offset="200">
+        <div class="jumbotron">
+            <p>Formidable aventure humaine et sportive, le 4L Trophy représente un vrai challenge de vie.</p>
+            <p>C'est armée de motivation et de tenacité que l'équipage 4alongtime va affronter les dunes du désert à bord de
+                la 4L.</p>
+            <p>6000km au total et 1300 équipages sont au rendez-vous de ce défi, le tout sur une durée de 10 jours.</p>
+            <p>Un parcours rempli d'obstacles et de galères mais avec au bout une statisfaction unique.</p>
         </div>
     </section>
 
-    <section class="module parallax" id="third_parallax" data-type="background" data-speed="3" data-offset="450">
+    <section class="module content" id="presentation_3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-1">
+                    <p>L'aventure débute par 2 jours au Village-Départ à Biarritz pour vérifier l'état du véhicule</p>
+                    <p>S'en suit alors une journée de voyage pour aller vers Algericas en territoire espagnol, puis cap sur
+                        le Maroc via des ferrys.</p>
+                    <p>Arrivé à bon port, c'est parti pour la course sur plusieurs jours à travers les dunes et des paysages
+                        à couper le souffle !</p>
+                    <p>On finit cette belle aventure avec une remise des prix, puis le retour en 4L en France, la tête remplie
+                        de souvenirs.</p>
+                </div>
+                <div class="col-md-4 ">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="module parallax" id="team" data-type="background" data-speed="3" data-offset="950">
         <div class="parallax-container">
-            <h1>Test</h1>
+            <h1>L'équipage</h1>
         </div>
 
     </section>
@@ -102,6 +131,9 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/parallax.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANwYe9IyEgorlF7ko4nYJQTbEN-so9Peg&callback=initMap" async
+        defer></script>
+    <script src="./js/customMaps.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,15 @@
+@font-face {
+    font-family: digital7;
+    src: url(../fonts/digital-7.ttf);
+}
+
 html {
     position: relative;
     min-height: 100%;
+}
+
+#map{
+    height: 450px;
 }
 
 .navbar {
@@ -43,4 +52,10 @@ html {
 
 #scrollTopButton:hover {
     background-color: #555;
+}
+
+#timeCounter {
+    font-family: "digital7";
+    font-size: 2em;
+    margin: 0;
 }
