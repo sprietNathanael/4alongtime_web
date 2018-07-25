@@ -38,7 +38,12 @@
         <div class="navbar-collapse collapse justify-content-stretch" id="navbarCollapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <p id="timeCounter"><span id="counter_d"></span> J - <span id="counter_h"></span> : <span id="counter_m"></span> : <span id="counter_s"></span></p>
+                    <p id="timeCounter">
+                        <span id="counter_d"></span> J -
+                        <span id="counter_h"></span> :
+                        <span id="counter_m"></span> :
+                        <span id="counter_s"></span>
+                    </p>
                 </li>
             </ul>
             <ul class="nav nav-pills ml-auto">
@@ -49,10 +54,10 @@
                     <a class="nav-link" href="#team">L'équipage</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Budget">Notre Budget</a>
+                    <a class="nav-link" href="#budget">Notre Budget</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#Mediatisation">Médiatisation</a>
+                    <a class="nav-link" href="#media">Médiatisation</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Sponsor">Espace sponsors</a>
@@ -124,13 +129,126 @@
 
     </section>
 
+    <section class="module content" id="team_2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-4" id="thomasImageContainer">
+                            <div class="imageCropper">
+                                <img src="./img/thomas.jpg" alt="thomas">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <h3>Thomas</h3>
+                            <p>" De nature curieux, je suis toujours prêt à me lancer dans des nouvelles aventures. Cette envie
+                                et ma passion pour les nouvelles technologies m'ont fait prendre le chemin d'une école d'ingénieurs
+                                dans l'informatique. Le monde de la data et du web sont des domaines qui m'attirent fortement.
+                                Je suis également secouriste et l'idée d'être présent pour son prochain est une valeur importante
+                                pour moi. Le 4L Trophy est un vrai challenge à faire, et c'est avec hâte que je relève le
+                                défi. "</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                            <div class="imageCropper" id="nathanaelImageContainer">
+                                <img src="./img/nathanael.jpg" alt="nathanael">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <h3>Nathanaël</h3>
+                            <p>" Passionné par l'informatique depuis mon plus jeune âge, j'étudie maintenant en école d'ingénieurs
+                                pour me spécialiser dans l'informatique embarquée. Depuis plus de trois ans, je suis aussi
+                                secouriste à la Croix-Rouge Française dont je défends les valeurs et les principes. Féru
+                                de photographie, je suis avide de nouvelles expériences et aventures en tout genre. "</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="module parallax" id="team_3" data-type="background" data-speed="3" data-offset="0">
+        <div class="jumbotron">
+            <h3>Éva</h3>
+            <p>Le troisième membre, et non des moindres, de l'équipage, c'est Éva ! La jeune 4L Clan soufflera ses 30 bougies
+                l'année prochaine. Née en 1989 dans les usines Cléon, elle fait partie des plus puissantes 4L avec un moteur
+                1108cm3 (pour 34 chevaux). Elle fut d'abord blanche, puis bleue, elle est maintenant rouge ! L'année prochaine
+                sera sa troisième participation au 4L Trophy, et elle y est déjà bien préparée. Il lui faudra malgré tout
+                une petite visite chez le garagiste pour quelques travaux et vérifications.
+            </p>
+        </div>
+    </section>
+
+    <section class="module content" id="budget">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 offset-md-2">
+                    <canvas id="budgetChart" width="400" height="400"></canvas>
+                </div>
+                <div class="col-md-5 textContainer">
+                    <h3>Budget</h3>
+                    <p>Pour nous assurer un départ sur les chapaux de roues, nous avons prévu un budget de 10,000 €.</p>
+                    <p>Cela comprent les 3300 € d'inscription au raid et les 100 € d'assurance obligatoires.</p>
+                    <p>À cela se rajoutent 5000 € pour l'achat et la préparation de la 4L, 1000 € pour les péages et l'essence, et enfin 600 € de matériel.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 offset-md-2 textContainer">
+                    <p>Grâce au sponsor, nous avons récolté à ce jour 1000 €, soit 1/10è de notre budget.</p>
+                </div>
+                <div class="col-md-3 ">
+                    <canvas id="progressChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="module parallax" id="media" data-type="background" data-speed="3" data-offset="550">
+        <div class="jumbotron">
+            <h3>Médiatisation</h3>
+            <p>Grâce à sa popularité, le 4L Trophy bénéficie tous les ans d'une couverture médiatique impressionnante. L'édition de l'année dernière représente :</p>
+            <ul>
+                <li>34 reportages TV et WEB TV, soit plus de 8h45 d'images sur les grandes chaînes telles que TF1, France Télévision, M6...</li>
+                <li>4,826 parution régionales, nationales et internationales dans les journaux tels que France info, l'Étudiant, Le Figaro...</li>
+                <li>80 reportages radios soit 1h15 d'antenne sur les radios telles que Virgin Radio, France Bleu, Europe 1, etc...</li>
+                <li>Les réseaux sociaux aussi sont gage de visibilité, avec 93,700 abonnés Facebook, 11,200 abonnés Instagram, 7,569 abonnés Twitter et 3,652 abonnés YouTube</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="module content" id="media_2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 offset-md-1">
+                            <img src="./img/encarts_2.png" alt="decoupage">
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Sponsorisation</h3>
+                        <p>Pour nous permettre de compléter notre budget, nous vous proposons d'afficher votre entreprise à la fois sur notre site internet, sur nos réseaux sociaux, mais surtout directement sur la 4L !</p>
+                        <p>Il y a plusieurs emplacements disponibles, sur toutes les faces de la voiture.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <button onclick="scrollToTop()" id="scrollTopButton" title="Go to top">Top</button>
 
 
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/chartjs.min.js"></script>
+    <script src="./js/chart.js"></script>
     <script src="./js/parallax.js"></script>
+    <script src="./js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANwYe9IyEgorlF7ko4nYJQTbEN-so9Peg&callback=initMap" async
         defer></script>
     <script src="./js/customMaps.js"></script>

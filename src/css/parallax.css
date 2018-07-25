@@ -75,12 +75,24 @@ section.module.parallax h3 {
     text-shadow: 0 0 10px black;
 }
 
-#greeting_parallax {
-    background-image: url("../img/trophy_4l_07.jpg");
+.parallax .jumbotron {
+    width:50%;
+    background: rgba(68, 68, 68, 0.61);
+    color:  white;
+    margin-left: 5%;
+    border-radius: 45px;
+}
+
+.module.parallax
+{
     background-position: 50% 0;
     background-repeat: repeat;
     background-attachment: fixed;
     background-size: cover;
+}
+
+#greeting_parallax {
+    background-image: url("../img/trophy_4l_07.jpg");
     padding: 40vh 0;
 }
 
@@ -95,28 +107,74 @@ section.module.parallax h3 {
 
 #presentation_2 {
     background-image: url("../img/trophy_4l_10.jpg");
-    background-position: 50% 0;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
-#presentation_2 .jumbotron {
-    width:50%;
-    background: rgba(68, 68, 68, 0.61);
-    color:  white;
-    margin-left: 5%;
-    border-radius: 45px;
 }
 
 #team {
     background-image: url("../img/IMG_3038-2.jpg");
-    background-position: 50% 0;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
+#team_2 img{
+    width: 100%;
+}
+
+#team_2 .imageCropper{
+    width: 100%;
+    /* height: 100%; */
+    padding-top:  100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+#team_2 .imageCropper img{
+    display: inline;
+    margin: 0 auto;
+    height:  auto;
+    position:  absolute;
+    top: 0;
+    bottom:  0;
+    left:  0;
+    right:  0;
+}
+
+#team_2 #thomasImageContainer img{
+    width: 166%;
+    transform: translate(-38%,-3%);
+}
+
+#team_2 #nathanaelImageContainer img{
+    width: 101%;
+    transform: translate(0%,-21%);
+}
+
+#team_2 p {
+ font-style: italic;
+ font-weight:  bold;
+ text-align:  center;
+}
+
+#team_2 h3 {
+    padding-top: 1%;
+    padding-bottom: 3%;
+    text-align:  center;
+}
+
+#team_3 {
+    background-image: url("../img/eva.jpg");
+}
+
+#budget .textContainer{
+    padding-top: 3%;
+}
+
+#media {
+    background-image: url("../img/trophy_4l_09.jpg");
+
+}
+
+#media_2 img{
+    width: 100%;
+}
 
 @media all and (min-width: 600px) {
     section.module h2 {

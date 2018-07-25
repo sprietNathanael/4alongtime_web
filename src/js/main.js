@@ -10,6 +10,7 @@ $(document).ready(function () {
             document.getElementById("scrollTopButton").style.display = "none";
         }
     });
+    createCharts();
 });
 
 $( window ).on('load',function(){
