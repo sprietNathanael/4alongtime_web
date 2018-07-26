@@ -46,7 +46,7 @@ function refreshCounter() {
 // Add scrollspy to <body>
 $('body').scrollspy({
     target: ".navbar",
-    offset: 50
+    offset: 66
 });
 
 // Add smooth scrolling on all links inside the navbar
@@ -60,7 +60,7 @@ $(".smoothScroll a").on('click', function (event) {
 
         // Store hash
         var hash = this.hash;
-        smoothScroll($(hash).offset().top, hash);
+        smoothScroll(($(hash).offset().top-65), hash);
 
     } // End if
 
@@ -69,11 +69,12 @@ $(".smoothScroll a").on('click', function (event) {
 function smoothScroll(top, hash) {
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    console.log(top);
     $('html, body').animate({
         scrollTop: top
     }, 800, function () {
 
         // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
+        // window.location.hash = hash;
     });
 }
