@@ -77,13 +77,13 @@ section.module.parallax h3 {
 
 .parallax .jumbotron {
     width:50%;
-    background: rgba(68, 68, 68, 0.61);
+    background: rgba(82, 82, 82, 0.61);
     color:  white;
     margin-left: 5%;
     border-radius: 45px;
 }
 
-.module.parallax
+.module.parallax[data-type="background"]
 {
     background-position: 50% 0;
     background-repeat: repeat;
@@ -91,9 +91,20 @@ section.module.parallax h3 {
     background-size: cover;
 }
 
+.vcenter{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-flow: column;
+}
+
 #greeting_parallax {
     background-image: url("../img/trophy_4l_07.jpg");
     padding: 40vh 0;
+}
+
+#greeting_parallax .parallax-container{
+    position: relative;
 }
 
 #presentation .parallax-container{
@@ -172,8 +183,40 @@ section.module.parallax h3 {
 
 }
 
-#media_2 img{
+#sponsor img{
     width: 100%;
+}
+
+#sponsor h3 {
+    padding-top: 5%;
+    padding-bottom: 8%;
+}
+
+#carouselIndicators{
+    min-width: 436px;
+    background:  white;
+}
+
+#carouselIndicators .carousel-indicators li{
+    /* border: 1px solid black; */
+}
+
+#contact {
+    background-image: url("../img/trophy_4l_11.jpg");
+}
+
+#contact_2{
+    background: rgb(39, 39, 39);
+    color: white;
+    padding: 10px;
+}
+
+#contact_2 img{
+    width: 100%;
+}
+#contact_2 a{
+
+    color: #fb1616;
 }
 
 @media all and (min-width: 600px) {
