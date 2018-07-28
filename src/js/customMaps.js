@@ -165,70 +165,169 @@ styles = [{
     }
 ]
 
+var markers = [];
+
+var tripStep = [{
+        lat: 45.764043,
+        lng: 4.835658999999964,
+        title: "Lyon",
+        desc: "Notre ville de départ",
+        icon: "http://maps.google.com/mapfiles/kml/pal3/icon56.png"
+    },
+    {
+        lat: 43.4831519,
+        lng: -1.5586260000000038,
+        title: "Biarritz",
+        desc: "Le village départ du raid, où seront vérifiées toutes les 4L",
+        icon: "http://maps.google.com/mapfiles/kml/pal3/icon31.png"
+    },
+    {
+        lat: 36.1407591,
+        lng: -5.4562329999999974,
+        title: "Algesiras",
+        icon: "http://maps.google.com/mapfiles/ms/micons/ferry.png"
+    },
+    {
+        lat: 33.9715904,
+        lng: -6.849812899999961,
+        title: "Rabat"
+    },
+    {
+        lat: 31.6294723,
+        lng: -7.981084499999952,
+        title: "Marrakech"
+    },
+    {
+        lat: 30.662833556499905,
+        lng: -6.224905945056435,
+
+    },
+    {
+        lat: 30.51151129249514,
+        lng: -5.510794616931435
+    },
+    {
+        lat: 30.662833556499905,
+        lng: -4.401175476306435
+    },
+    {
+        lat: 31.096564907882417,
+        lng: -4.115530945056435
+    },
+    {
+        lat: 31.84617569877643,
+        lng: -3.8298864138064346
+    },
+    {
+        lat: 32.6799423,
+        lng: -4.732926799999973
+    },
+    {
+        lat: 33.9715904,
+        lng: -6.849812899999961,
+        title: "Rabat"
+    }
+
+];
+
+var lineSymbol = {
+    path: "M 0,-1 0,1 z M 2,-1 2,1",
+    strokeOpacity: 1,
+    scale: 2
+}
+
+var map;
+var tripPath
+
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 5,
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
         center: {
-            lat: 37.914710993580684,
-            lng: 1.5597042211344387
+            lat: 38.5,
+            lng: 0.5629708883479907
         },
         styles: styles,
         mapTypeId: 'terrain'
     });
 
-    var tripCoordinates = [{
-            lat: 43.4831519,
-            lng: -1.5586260000000038
-        },
-        {
-            lat: 36.1407591,
-            lng: -5.4562329999999974
-        },
-        {
-            lat: 33.9715904,
-            lng: -6.849812899999961
-        },
-        {
-            lat: 31.6294723,
-            lng: -7.981084499999952
-        },
-        {
-            lat: 30.662833556499905,
-            lng: -6.224905945056435
-        },
-        {
-            lat: 30.51151129249514,
-            lng: -5.510794616931435
-        },
-        {
-            lat: 30.662833556499905,
-            lng: -4.401175476306435
-        },
-        {
-            lat: 31.096564907882417,
-            lng: -4.115530945056435
-        },
-        {
-            lat: 31.84617569877643,
-            lng: -3.8298864138064346
-        },
-        {
-            lat: 32.6799423,
-            lng: -4.732926799999973
-        },
-        {
-            lat: 33.9715904,
-            lng: -6.849812899999961
-        }
-
-    ];
-    var tripPath = new google.maps.Polyline({
-        path: tripCoordinates,
+    tripPath = new google.maps.Polyline({
+        path: [],
         geodesic: true,
         strokeColor: '#FF0000',
-        strokeOpacity: 1.0,
-        strokeWeight: 2
-    });
+        strokeOpacity: 0,
+        // strokeWeight: 2,
+        icons: [{
+            icon: lineSymbol,
+            offset: "0",
+            repeat: "10px"
+        }],
+        map: map
 
-    tripPath.setMap(map);
+    });
 }
+
+function addMarker(step) {
+    console.log("Add marker");
+    intMarker = new google.maps.Marker({
+        position: new google.maps.LatLng(step.lat, step.lng),
+        title: step.title,
+        icon: step.icon ? step.icon : "http://labs.google.com/ridefinder/images/mm_20_gray.png",
+        map: map,
+        animation: google.maps.Animation.DROP
+    });
+    latlng = new google.maps.LatLng(step.lat, step.lng);
+    tripPath.getPath().push(latlng);
+    markers.push(intMarker);
+}
+
+var markersAlreadyDropped = false;
+var markersTimeout = [];
+
+function dropMapMarkers(timeout) {
+    if (!markersAlreadyDropped) {
+        console.log("drop all markers");
+        markersAlreadyDropped = true;
+        for (let i = 0; i < tripStep.length; i++) {
+            console.log("drop a markers");
+            markersTimeout.push(setTimeout(function () {
+                addMarker(tripStep[i]);
+            }, i * timeout));
+        }
+    }
+}
+
+function clearMapsMarkers() {
+    console.log("remove all markers : "+markers.length);
+    console.log("clear all timeouts : "+markersTimeout.length);
+    for(let i = 0; i < markersTimeout.length; i++) {
+        clearTimeout(markersTimeout[i]);
+    }
+    markersTimeout = [];
+    tripPath.getPath().clear();
+    console.log("clear markers : "+markers.length);
+    for (let i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+    markers = [];
+    markersAlreadyDropped = false;
+}
+
+
+/*for(i = 0; i < markers.length; i++)
+
+{
+    if(markers[i].desc !== undefined)
+    {
+        markers[i].infoWindow = new google.maps.InfoWindow({
+            content: "<div id='content'><div id='siteNotice'></div><h1 id='firstHeading' class='firstHeading'>"+
+            markers[i].title+
+            "</h1><div class='bodyContent'>"+
+            markers[i].desc+
+            "</div></div>"
+        })
+        markers[i].addListener('click', function(){
+            console.log("test");
+            markers[i].infoWindow.open(map, markers[i]);
+        });
+    }
+}*/
