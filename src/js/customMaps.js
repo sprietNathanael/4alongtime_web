@@ -184,7 +184,7 @@ var tripStep = [{
     {
         lat: 36.1407591,
         lng: -5.4562329999999974,
-        title: "Algesiras",
+        title: "Algéciras",
         icon: "http://maps.google.com/mapfiles/ms/micons/ferry.png"
     },
     {
