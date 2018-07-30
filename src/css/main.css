@@ -96,3 +96,8 @@ em{
 #buttonDown i{
     transform: scale(1,1);
 }
+
+.carousel-caption{
+    background: #3a3a3ac7;
+    border-radius: 22px;
+}
