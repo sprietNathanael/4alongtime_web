@@ -3,6 +3,11 @@
     src: url(../fonts/digital-7.ttf);
 }
 
+@font-face {
+    font-family: papyrus;
+    src: url(../fonts/papyrus.ttf);
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -10,6 +15,11 @@ html {
 
 #map{
     height: 450px;
+}
+
+.alongtime{
+    font-weight:  normal;
+    font-family: papyrus;
 }
 
 .navbar {
