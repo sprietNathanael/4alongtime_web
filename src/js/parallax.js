@@ -1,5 +1,5 @@
 //parallax js
-$(document).ready(function () {
+function parallaxInit(){
     var $window = $(window);
     $('section[data-type="background"]').each(function () {
         var $bgobj = $(this); // assigning the object
@@ -16,4 +16,4 @@ $(document).ready(function () {
             });
         });
     });
-});
+};

@@ -303,7 +303,12 @@ function clearMapsMarkers() {
         clearTimeout(markersTimeout[i]);
     }
     markersTimeout = [];
-    tripPath.getPath().clear();
+
+    if(tripPath !== undefined)
+    {
+        tripPath.getPath().clear();
+    }
+
     console.log("clear markers : "+markers.length);
     for (let i = 0; i < markers.length; i++) {
         markers[i].setMap(null);

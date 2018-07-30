@@ -1,6 +1,7 @@
 var endDate = new Date("02-20-2019 23:00:00");
 
 $(document).ready(function () {
+    parallaxInit();
     $(document).on("scroll", function () {
         if ($(document).scrollTop() >= 80) {
             $(".navbar").addClass("compressed");
@@ -13,11 +14,16 @@ $(document).ready(function () {
     // createCharts();
     refreshCounter();
     setInterval(refreshCounter, 500);
-    clearMapsMarkers();
 });
 
 $(window).on('load', function () {
+    console.log("========== scroll to top ==========");
     scrollToTop();
+    clearTimeout(dropMarkersTimeout);
+    clearTimeout(createChartsTimeout);
+    clearMapsMarkers();
+    destroyCharts();
+    console.log("========== scroll to top ends ==========");
 
 });
 

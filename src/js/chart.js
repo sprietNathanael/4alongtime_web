@@ -8,8 +8,14 @@ function createCharts(){
 }
 
 function destroyCharts(){
-    progressChart.detroy();
-    detailsChart.destroy();
+    if(progressChart !== undefined)
+    {
+        progressChart.destroy();
+    }
+    if(detailsChart !== undefined)
+    {
+        detailsChart.destroy();
+    }
 }
 
 function createProgressChart(){
