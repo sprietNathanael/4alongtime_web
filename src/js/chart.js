@@ -1,7 +1,15 @@
+var progressChart;
+var detailsChart;
+
 function createCharts(){
     createProgressChart();
     createDetailsChart();
 
+}
+
+function destroyCharts(){
+    progressChart.detroy();
+    detailsChart.destroy();
 }
 
 function createProgressChart(){
@@ -23,7 +31,7 @@ function createProgressChart(){
 
     };
     // And for a doughnut chart
-    var myDoughnutChart = new Chart(ctx, {
+    progressChart = new Chart(ctx, {
         type: 'doughnut',
         data: data,
         // options: options
@@ -57,7 +65,7 @@ function createDetailsChart(){
 
     };
     // And for a doughnut chart
-    var myDoughnutChart = new Chart(ctx, {
+    detailsChart = new Chart(ctx, {
         type: 'doughnut',
         data: data,
         // options: options

@@ -312,6 +312,10 @@ function clearMapsMarkers() {
     markersAlreadyDropped = false;
 }
 
+function dropMarkersOnce() {
+    dropMapMarkers(250);
+}
+
 
 /*for(i = 0; i < markers.length; i++)
 

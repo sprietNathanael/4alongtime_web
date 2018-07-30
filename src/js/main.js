@@ -10,7 +10,7 @@ $(document).ready(function () {
             document.getElementById("scrollTopButton").style.display = "none";
         }
     });
-    createCharts();
+    // createCharts();
     refreshCounter();
     setInterval(refreshCounter, 500);
     clearMapsMarkers();
@@ -79,52 +79,4 @@ function smoothScroll(top, hash) {
         // Add hash (#) to URL when done scrolling (default click behavior)
         // window.location.hash = hash;
     });
-}
-
-var dropMarkersTimeout;
-
-var mapsWaypointBottom = new Waypoint({
-    element: $("#presentation_3"),
-    handler: function(direction){
-        if(direction === "down")
-        {
-            dropMarkersTimeout = setTimeout(dropMarkersOnce,50);
-        }
-    },
-    offset:"bottom-in-view"
-});
-
-var mapsWaypointTop = new Waypoint({
-    element: $("#presentation_3"),
-    handler: function(direction){
-        if(direction === "up")
-        {
-            dropMarkersTimeout = setTimeout(dropMarkersOnce,50);
-        }
-    }
-});
-
-var mapsWaypointExitDown = new Waypoint({
-    element: $("#team"),
-    handler: function(direction){
-        if(direction === "down")
-        {
-            clearMapsMarkers();
-        }
-    },
-});
-
-var mapsWaypointTopUp = new Waypoint({
-    element: $("#presentation_2"),
-    handler: function(direction){
-        if(direction === "up")
-        {
-            clearMapsMarkers();
-        }
-    },
-    offset:"bottom-in-view"
-});
-
-function dropMarkersOnce() {
-    dropMapMarkers(250);
 }
