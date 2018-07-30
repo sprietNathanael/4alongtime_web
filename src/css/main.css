@@ -42,6 +42,7 @@ html {
 em{
     color: #fb1616;
     font-style:  inherit;
+    font-weight:  bold;
 }
 
 .navbar a {
