@@ -34,24 +34,25 @@
 <body>
     <!--data-spy="scroll" data-target="#navbar" data-offset="10">-->
 
-    <nav class="navbar navbar-expand-lg fixed-top smoothScroll" id="navbar">
-        <div class="d-flex w-25 order-1">
+    <nav class="navbar navbar-expand-xl fixed-top smoothScroll" id="navbar">
+        <div class="d-flex col-xl-3 col-lg-3 col-md-3 col-4 order-1">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo-equipage.png" alt="4LTrophy" />
+                <img src="./img/logo_transp_inv.png" alt="4aLongTime" />
                 <span class="alongtime">4aLongtime</span>
             </a>
         </div>
-        <span class="navbar-text mt-1 w-25 text-right order-2" id="timeCounter">
+        <span class="navbar-text mt-1 col-xl-3 col-lg-3 col-md-3 col-4 text-right order-2" id="timeCounter">
             J -
             <span id="counter_d"></span>
             <!-- <span id="counter_h"></span> :
                     <span id="counter_m"></span> :
                     <span id="counter_s"></span> -->
         </span>
-        <button class="navbar-toggler text-right order-3 w-50" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+        <button class="navbar-toggler text-right order-3 col-2" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <i class="fa fa-bars"></i>
         </button>
-        <div class="navbar-collapse collapse text-right order-3 w-50 pl-5" id="navbarCollapse">
+        <div class="navbar-collapse collapse text-right order-3 col-xl-6 col-12 pl-5" id="navbarCollapse">
             <ul class="nav nav-pills ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#presentation">Présentation</a>
@@ -75,7 +76,10 @@
         </div>
     </nav>
 
-    <section class="module parallax" id="greeting_parallax" data-type="background" data-speed="3" data-offset="0">
+    <section class="module parallax" id="greeting_parallax" data-type="background" data-speed-xxl="2" data-zoom-xxl="130%" data-offset-xxl="100"
+        data-speed-xl="3" data-zoom-xl="130%" data-offset-xl="100" data-speed-lg="2" data-zoom-lg="160%" data-offset-lg="0" data-speed-md="2"
+        data-zoom-md="200%" data-offset-md="0" data-speed-smd="2" data-zoom-smd="280%" data-offset-smd="0" data-speed-sm="2"
+        data-zoom-sm="280%" data-offset-sm="0" data-speed-xs="2" data-zoom-xs="280%" data-offset-xs="0">
         <div class="parallax-container">
             <h1>
                 <span class="alongtime">4aLongtime</span>
@@ -89,16 +93,15 @@
     <section class="module content" id="presentation">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4 offset-md-1">
+                <div class="col-xl-4 offset-xl-1 col-lg-5 offset-lg-0 col-10 offset-1">
                     <img src="./img/enfatnsDesert.jpg" alt="enfantsDuDesert">
                 </div>
-                <div class="col-md-6">
+                <div class="col-xl-6 offset-xl-0 col-lg-7 offset-lg-0 col-10 offset-1">
                     <h2>Un raid
                         <em>humanitaire</em>
                     </h2>
                     <p>Le Raid 4L Trophy est avant tout une démarche
-                        <em>solidaire</em> et
-                        <em>écocitoyenne</em>.</p>
+                        <em>solidaire</em>.</p>
                     <p>À bord de notre 4L, nous allons amener du matériel scolaire aux enfants les plus démunis du Maroc.</p>
                 </div>
                 <!-- <p>Mais pour compléter cet effort de solidarité, un des objectifs de 4aLongTime est d'amener des notions de secourisme aux enfants avec le partenariat de l'association "Enfants du désert" grâce à nos compétences dans ce secteur.</p> -->
@@ -106,12 +109,15 @@
         </div>
     </section>
 
-    <section class="module parallax" id="presentation_2" data-type="background" data-speed="3" data-offset="200">
+    <section class="module parallax" id="presentation_2" data-type="background" data-speed-xxl="3" data-zoom-xxl="190%" data-offset-xxl="270"
+        data-speed-xl="3" data-zoom-xl="190%" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="225%" data-offset-lg="130" data-speed-md="2"
+        data-zoom-md="300%" data-offset-md="170" data-speed-smd="5" data-zoom-smd="350%" data-offset-smd="30" data-speed-sm="8"
+        data-zoom-sm="350%" data-offset-sm="30" data-speed-xs="2" data-zoom-xs="280%" data-offset-xs="90">
         <div class="jumbotron">
             <p>Formidable
                 <em>aventure humaine</em> et sportive, le 4L Trophy représente un vrai challenge de vie.</p>
             <p>C'est armé de motivation et de ténacité que l'équipage
-                <span class="alongtime">4aLongtime</span> va affronter les dunes du désert à bord de la 4L.</p>
+                <span class="alongtime">4aLongtime</span> va affronter les dunes du désert à bord de sa 4L.</p>
             <p>6000km au total et 1300 équipages sont au rendez-vous de ce défi, le tout sur une durée de 10 jours.</p>
             <p>Un parcours rempli d'obstacles et de galères mais avec au bout une
                 <em>satisfaction unique</em>.</p>
@@ -121,7 +127,7 @@
     <section class="module content" id="presentation_3">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 offset-md-1">
+                <div class="col-xl-6 offset-xl-1 col-lg-7 offset-lg-0 col-10 offset-1">
                     <p>L'aventure débute par 2 jours au Village-Départ à
                         <em>Biarritz</em> pour vérifier l'état du véhicule.</p>
                     <p>S'ensuit alors une journée de voyage pour aller vers
@@ -132,14 +138,18 @@
                     <p>On finit cette belle aventure avec la remise des prix, puis le retour en 4L en France, la tête remplie
                         de souvenirs.</p>
                 </div>
-                <div class="col-md-4 ">
+                <div class="col-xl-4 offset-xl-0 col-lg-5 offset-lg-0 col-10 offset-1">
                     <div id="map"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="module parallax" id="team" data-type="background" data-speed="3" data-offset="950">
+    <section class="module parallax" id="team" data-type="background" data-speed="3" data-speed-xxl="2" data-zoom-xxl="180%"
+        data-offset-xxl="300" data-speed-xl="4" data-zoom-xl="200%" data-offset-xl="95" data-speed-lg="4" data-zoom-lg="225%"
+        data-offset-lg="90" data-speed-md="6" data-zoom-md="300%" data-offset-md="160" data-speed-smd="6" data-zoom-smd="350%"
+        data-offset-smd="180" data-speed-sm="8" data-zoom-sm="350%" data-offset-sm="180" data-speed-xs="2" data-zoom-xs="280%"
+        data-offset-xs="0">
         <div class="parallax-container">
             <h1>L'équipage</h1>
         </div>
@@ -149,67 +159,76 @@
     <section class="module content" id="team_2">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4 offset-md-4" id="thomasImageContainer">
-                            <div class="imageCropper">
-                                <img src="./img/thomas.jpg" alt="thomas">
-                            </div>
+                <div class="col-xl-6 col-lg-6 col-12 row teamPart">
+                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1" id="thomasImageContainer">
+                        <div class="imageCropper">
+                            <img src="./img/thomas.jpg" alt="thomas">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 offset-md-2">
-                            <h3>
-                                <em>Thomas</em>
-                            </h3>
-                            <p>" De nature curieux, je suis toujours prêt à me lancer dans des nouvelles aventures. Cette envie
-                                et ma passion pour les nouvelles technologies m'ont fait prendre le chemin d'une école d'ingénieurs
-                                dans l'informatique. Le monde de
-                                <em>la data</em> et du
-                                <em>web</em> sont des domaines qui m'attirent. Je suis également
-                                <em>secouriste</em> et l'idée d'être présent pour son prochain est une valeur importante pour
-                                moi. Le 4L Trophy est un vrai
-                                <em>challenge</em> à faire, et c'est avec hâte que je relève le défi. "</p>
+                    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-6 offset-1">
+                        <h3>
+                            <em>Thomas</em>
+                        </h3>
+                        <p>" De nature curieux, je suis toujours prêt à me lancer dans des nouvelles aventures. Cette envie
+                            et ma passion pour les nouvelles technologies m'ont fait prendre le chemin d'une école d'ingénieurs
+                            dans l'informatique. Le monde de
+                            <em>la data</em> et du
+                            <em>web</em> sont des domaines qui m'attirent. Je suis également
+                            <em>secouriste</em> et l'idée d'être présent pour son prochain est une valeur importante pour moi.
+                            Le 4L Trophy est un vrai
+                            <em>challenge</em> à faire, et c'est avec hâte que je relève le défi. "</p>
 
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4 offset-md-4">
-                            <div class="imageCropper" id="nathanaelImageContainer">
-                                <img src="./img/nathanael.jpg" alt="nathanael">
-                            </div>
+                <div class="col-xl-6 col-lg-6 col-12 row d-flex teamPart">
+                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1 order-xl-0 order-lg-0 order-1">
+                        <div class="imageCropper" id="nathanaelImageContainer">
+                            <img src="./img/nathanael.jpg" alt="nathanael">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8 offset-md-2">
-                            <h3>
-                                <em>Nathanaël</em>
-                            </h3>
-                            <p>" Passionné par l'informatique depuis mon plus jeune âge, j'étudie maintenant en école d'ingénieurs
-                                pour me spécialiser dans
-                                <em>l'informatique embarquée</em>. Depuis plus de trois ans, je suis
-                                <em>secouriste</em> à la Croix-Rouge Française dont je défends les valeurs et les principes.
-                                Féru de
-                                <em>photographie</em>, je suis avide de
-                                <em>nouvelles expériences</em> et
-                                <em>aventures en tout genre</em>. "</p>
-                        </div>
+                    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-6 offset-1 order-xl-1 order-lg-1 order-0">
+                        <h3>
+                            <em>Nathanaël</em>
+                        </h3>
+                        <p>" Passionné par l'informatique depuis mon plus jeune âge, j'étudie maintenant en école d'ingénieurs
+                            pour me spécialiser dans
+                            <em>l'informatique embarquée</em>. Depuis plus de trois ans, je suis
+                            <em>secouriste</em> à la Croix-Rouge Française dont je défends les valeurs et les principes. Féru
+                            de
+                            <em>photographie</em>, je suis avide de
+                            <em>nouvelles expériences</em> et
+                            <em>aventures en tout genre</em>. "</p>
                     </div>
 
                 </div>
+                <div class="col-12 row teamPart">
+                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1" id="cpeImageContainer">
+                        <img src="./img/CPE.png" alt="CPE">
+                    </div>
+                    <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-6 offset-1">
+                        <p>Nous sommes tous deux apprentis ingénieurs en 5è année à CPE - Lyon, dans la filière <em>Informatique
+                            et Réseaux de Communication</em>. L'apprentissage nous donne un regard nouveau sur nos études en nous
+                            permettant de mettre en application directe en entreprise ce que nous apprenons en cours. Cela
+                            nous apporte aussi de l'<em>autonomie</em> et de la <em>rigueur</em>, éléments essentiels pour évoluer dans le
+                            monde du travail.</p>
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="module parallax" id="team_3" data-type="background" data-speed="3" data-offset="0">
-        <div class="jumbotron">
+    <section class="module parallax" id="team_3" data-type="background" data-speed="3" data-speed-xxl="8" data-zoom-xxl="120%"
+        data-offset-xxl="140" data-speed-xl="6" data-zoom-xl="130%" data-offset-xl="40" data-speed-lg="6" data-zoom-lg="155%"
+        data-offset-lg="40" data-speed-md="5" data-zoom-md="190%" data-offset-md="35" data-speed-smd="6" data-zoom-smd="200%" data-offset-smd="30"
+        data-speed-sm="7" data-zoom-sm="200%" data-offset-sm="45" data-speed-xs="7" data-zoom-xs="220%" data-offset-xs="25">
+        <div class="jumbotron jumbotron-large">
             <h3>Éva</h3>
-            <p>Le troisième membre (et non des moindres !) de l'équipage, c'est Éva ! La jeune 4L Clan soufflera ses 30 bougies
-                l'année prochaine. Née en 1989 dans les usines Cléon, elle fait partie des plus puissantes 4L avec un moteur
-                1108cm3 (pour 34 chevaux). Elle fut d'abord blanche, puis bleue, elle est maintenant rouge ! L'année prochaine
-                sera sa troisième participation au 4L Trophy, et elle y est déjà bien préparée. Il lui faudra malgré tout
+            <p>Le troisième membre (et non des moindres !) de l'équipage, c'est Éva ! La jeune <em>4L Clan</em> soufflera ses 30 bougies
+                l'année prochaine. Née en <em>1989</em> dans les usines Cléon, elle fait partie des plus puissantes 4L avec un moteur
+                <em>1108cm3</em> (pour 34 chevaux). Elle fut d'abord blanche, puis bleue, elle est maintenant rouge ! L'année prochaine
+                sera sa <em>troisième participation</em> au 4L Trophy, et elle y est déjà bien préparée. Il lui faudra malgré tout
                 une petite visite chez le garagiste pour quelques travaux et vérifications. </p>
         </div>
     </section>
@@ -217,10 +236,10 @@
     <section class="module content" id="budget">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 offset-md-2">
+                <div class="col-xl-3 offset-xl-2 col-lg-4 offset-lg-0 col-6 offset-3">
                     <canvas id="budgetChart" width="400" height="400"></canvas>
                 </div>
-                <div class="col-md-5 textContainer">
+                <div class="col-xl-5 offset-xl-0 col-lg-8 offset-lg-0 col-10 offset-1 textContainer">
                     <h3>Budget</h3>
                     <p>Pour nous assurer un départ sur les chapeaux de roues, nous avons prévu un budget de
                         <em>10 000 €</em>.</p>
@@ -234,21 +253,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5 offset-md-2 textContainer">
+                <div class="col-xl-5 offset-xl-2 col-lg-8 offset-lg-0 col-10 offset-1 textContainer">
                     <p>Grâce au sponsor, nous avons récolté à ce jour
                         <em>1000 €</em>, soit
                         <em>1/10è</em> de notre budget.</p>
                 </div>
-                <div class="col-md-3 ">
+                <div class="col-xl-3 offset-xl-0 col-lg-4 offset-lg-0 col-6 offset-3">
                     <canvas id="progressChart" width="400" height="400"></canvas>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="module parallax" id="media" data-type="background" data-speed="3" data-offset="550">
+    <section class="module parallax" id="media" data-type="background" data-speed="3" data-speed-xxl="2" data-zoom-xxl="150%"
+        data-offset-xxl="170" data-speed-xl="4" data-zoom-xl="175%" data-offset-xl="40" data-speed-lg="2" data-zoom-lg="200%"
+        data-offset-lg="0" data-speed-md="4" data-zoom-md="250%" data-offset-md="200" data-speed-smd="6" data-zoom-smd="300%"
+        data-offset-smd="100" data-speed-sm="6" data-zoom-sm="300%" data-offset-sm="75" data-speed-xs="6" data-zoom-xs="300%"
+        data-offset-xs="20">
         <div class="jumbotron">
-            <h3>Médiatisation</h3>
+            <h3>Médias</h3>
             <p>Grâce à sa popularité, le 4L Trophy bénéficie tous les ans d'une
                 <em>couverture médiatique impressionnante</em>. L'édition de l'année dernière représente :</p>
             <ul>
@@ -274,24 +297,24 @@
     <section class="module content" id="sponsor">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6 offset-md-1">
+                <div class="col-xl-6 offset-xl-1 col-lg-7 offset-lg-0 col-8 offset-2">
                     <img src="./img/encarts_2.png" alt="decoupage">
                 </div>
-                <div class="col-md-4">
+                <div class="col-xl-4 offset-xl-0 col-lg-5 offset-lg-0 col-10 offset-1">
                     <h3>Sponsorisation</h3>
-                    <p>Pour nous permettre de compléter notre budget, nous vous proposons d'afficher votre entreprise à la fois
-                        sur notre site internet, sur nos réseaux sociaux, mais surtout directement sur la 4L !</p>
+                    <p>Pour nous permettre de compléter notre budget, nous vous proposons d'afficher <em>votre entreprise</em> à la fois
+                        sur notre site internet, sur nos réseaux sociaux, mais surtout <em>directement sur la 4L</em> !</p>
                     <p>Il y a plusieurs emplacements disponibles, sur toutes les faces de la voiture.</p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-4 offset-md-2">
+                <div class="col-8 offset-xl-2 offset-lg-1">
                     <h3>Ils nous sponsorisent : </h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-10 offset-1">
                     <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
@@ -303,7 +326,7 @@
                                     <img class="d-block w-100" src="./img/carbonbeeLogo3.jpg" alt="First slide">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Carbon Bee</h5>
-                                        <p>description de Cbee Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                        <p>CarbonBee développe une camera hyperspectrale pour les drones agricoles, robots agricoles, et cameras pour tracteurs.</p>
                                     </div>
                                 </a>
                                 </a>
@@ -330,14 +353,18 @@
         </div>
     </section>
 
-    <section class="module parallax" id="contact" data-type="background" data-speed="3" data-offset="30">
+    <section class="module parallax" id="contact" data-type="background" data-speed="3" data-speed-xxl="0" data-zoom-xxl="100%"
+        data-offset-xxl="130" data-speed-xl="0" data-zoom-xl="100%" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="100%"
+        data-offset-lg="10" data-speed-md="2" data-zoom-md="100%" data-offset-md="20" data-speed-smd="2" data-zoom-smd="130%"
+        data-offset-smd="110" data-speed-sm="2" data-zoom-sm="130%" data-offset-sm="103" data-speed-xs="2" data-zoom-xs="150%"
+        data-offset-xs="120">
         <h3>Merci... et à bientôt !</h3>
     </section>
 
     <section class="module content" id="contact_2">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-3 offset-md-2 vcenter">
+                <div class="col-xl-3 offset-xl-2 col-4 offset-0 vcenter">
                     <p>Vous pouvez nous contacter directement sur l'adresse mail
                         <a href="mailto:contact@4alongtime.fr">contact@4alongtime.fr</a>
                     </p>
@@ -346,10 +373,10 @@
                             <i class="fab fa-facebook-square"></i> @4alongtime2019</a>
                     </p>
                 </div>
-                <div class="col-md-2 align-middle vcenter">
+                <div class="col-xl-2 col-4 align-middle vcenter">
                     <img src="./img/logo_transp_inv.png" alt="logo">
                 </div>
-                <div class="col-md-3 align-middle vcenter">
+                <div class="col-xl-3 col-4 align-middle vcenter">
                     <p>Copiright
                         <span class="alongtime">4aLongtime</span> - 2018</p>
                 </div>

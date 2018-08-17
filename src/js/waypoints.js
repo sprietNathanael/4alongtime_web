@@ -7,7 +7,7 @@ var mapsWaypointDown = new Waypoint({
         if(direction === "down")
         {
             console.log("==== maps create waypoint down ====");
-            dropMarkersTimeout = setTimeout(dropMarkersOnce,50);
+            dropMarkersTimeout = setTimeout(dropMarkersOnce,20);
         }
     },
     offset:"bottom-in-view"
@@ -19,7 +19,7 @@ var mapsWaypointUp = new Waypoint({
         if(direction === "up")
         {
             console.log("==== maps create waypoint up ====");
-            dropMarkersTimeout = setTimeout(dropMarkersOnce,50);
+            dropMarkersTimeout = setTimeout(dropMarkersOnce,20);
         }
     }
 });
