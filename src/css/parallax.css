@@ -33,7 +33,7 @@ section.module p:last-child {
 
 section.module.content {
     padding: 40px 0;
-    background-color: rgba(207, 216, 220, 0.5);
+    /* background-color: rgba(207, 216, 220, 0.5); */
 }
 
 section.module.content:last-child {
@@ -43,6 +43,7 @@ section.module.content:last-child {
 section.module.parallax {
     padding: 240px 0;
     background-position: 0 0;
+    position: relative;
 }
 
 section.module.parallax h1 {
@@ -76,12 +77,17 @@ section.module.parallax h3 {
     text-shadow: 0 0 10px black;
 }
 
+body{
+    background: rgba(207, 216, 220, 0.5);
+}
+
 .parallax .jumbotron {
     width:50%;
     background: rgba(37, 37, 37, 0.84);
     color:  white;
     margin-left: 5%;
     border-radius: 45px;
+    position:  relative;
 }
 
 .parallax .jumbotron-large {
@@ -92,13 +98,20 @@ section.module.parallax h3 {
     border-radius: 45px;
 }
 
-.module.parallax[data-type="background"]
+.module.parallax[data-type="background"] .imageContainer
 {
-    background-position: 50% 0;
-    background-repeat: repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-user-modify: read-only;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    overflow:  hidden;
+}
+
+.module.parallax[data-type="background"] .imageContainer img
+{
+    width: 100%;
+    position:  absolute;
+    top: 0px;
 }
 
 .vcenter{
@@ -108,30 +121,16 @@ section.module.parallax h3 {
     flex-flow: column;
 }
 
-#greeting_parallax {
-    background-image: url("../img/trophy_4l_07.jpg");
+#greeting_parallax{
     padding: 40vh 0;
 }
 
-#greeting_parallax .parallax-container{
+.parallax-container{
     position: relative;
 }
 
-#presentation .parallax-container{
-    margin: 0 0;
-}
-
-
 #presentation img{
     width: 100%;
-}
-
-#presentation_2 {
-    background-image: url("../img/trophy_4l_10.jpg");
-}
-
-#team {
-    background-image: url("../img/IMG_3038-2.jpg");
 }
 
 #team_2 img{
@@ -184,17 +183,8 @@ section.module.parallax h3 {
     text-align:  center;
 }
 
-#team_3 {
-    background-image: url("../img/eva.jpg");
-}
-
 #budget .textContainer{
     padding-top: 3%;
-}
-
-#media {
-    background-image: url("../img/trophy_4l_09.jpg");
-
 }
 
 #sponsor img{
@@ -213,10 +203,6 @@ section.module.parallax h3 {
 
 #carouselIndicators .carousel-indicators li{
     /* border: 1px solid black; */
-}
-
-#contact {
-    background-image: url("../img/trophy_4l_11.jpg");
 }
 
 #contact_2{

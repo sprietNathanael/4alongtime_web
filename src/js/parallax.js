@@ -3,7 +3,7 @@ var mobileCoeff;
 //parallax js
 function parallaxInit(){
     var $window = $(window);
-    mobileCoeff = mobileUsed ? -1 : -1;
+    mobileCoeff = mobileUsed ? 1 : 1;
     $('section[data-type="background"]').each(function () {
         var $bgobj = $(this); // assigning the object
         parallaxApply($bgobj, $window);
@@ -58,15 +58,15 @@ function parallaxApply($bgobj, $window){
     }
     // offset = $bgobj.data('offset1200');
 
-    // var yPos = speed ? mobileCoeff*(($window.scrollTop() / speed)+((offset/100)*$bgobj.width())) : (offset/100)*$bgobj.width() ;
-    var yPos = (offset/100)*$bgobj.width() ;
+    var yPos = speed ? mobileCoeff*((($window.scrollTop()-$bgobj.position().top )/ speed)+((offset/100)*$bgobj.width())) : (offset/100)*$bgobj.width() ;
+    // var yPos = (offset/100)*$bgobj.width();
 
-    // Put together our final background position
-    var coords = '50% ' + yPos + 'px';
+    var img = $($bgobj.find(".imageContainer img")[0]);
+    zoom = zoom/ 100;
 
-    // Move the background
-    $bgobj.css({
-        backgroundPosition: coords,
-        backgroundSize: zoom
+    img.css({
+        "top": yPos+"px",
+        "transform": "scale("+zoom+")",
+
     });
 }
