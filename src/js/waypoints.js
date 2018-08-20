@@ -1,12 +1,14 @@
 var dropMarkersTimeout;
 var createChartsTimeout;
 
+// Those are the events triggered by the scroll to or from sections
+
 var mapsWaypointDown = new Waypoint({
     element: $("#presentation_3"),
     handler: function(direction){
         if(direction === "down")
         {
-            console.log("==== maps create waypoint down ====");
+            // console.log("==== maps create waypoint down ====");
             dropMarkersTimeout = setTimeout(dropMarkersOnce,20);
         }
     },
@@ -18,7 +20,7 @@ var mapsWaypointUp = new Waypoint({
     handler: function(direction){
         if(direction === "up")
         {
-            console.log("==== maps create waypoint up ====");
+            // console.log("==== maps create waypoint up ====");
             dropMarkersTimeout = setTimeout(dropMarkersOnce,20);
         }
     }
@@ -29,7 +31,7 @@ var mapsWaypointExitDown = new Waypoint({
     handler: function(direction){
         if(direction === "down")
         {
-            console.log("==== maps clear waypoint down ====");
+            // console.log("==== maps clear waypoint down ====");
             clearTimeout(dropMarkersTimeout);
             clearMapsMarkers();
         }
@@ -41,7 +43,7 @@ var mapsWaypointExitUp = new Waypoint({
     handler: function(direction){
         if(direction === "up")
         {
-            console.log("==== maps clear waypoint up ====");
+            // console.log("==== maps clear waypoint up ====");
             clearTimeout(dropMarkersTimeout);
             clearMapsMarkers();
         }
@@ -54,12 +56,12 @@ var chartsWaypointDown = new Waypoint({
     handler: function(direction){
         if(direction === "down")
         {
-            console.log("==== chart create waypoint down ====");
+            // console.log("==== chart create waypoint down ====");
             createChartsTimeout = setTimeout(createCharts,500);
         }
         else if(direction === "up")
         {
-            console.log("==== chart clear waypoint up ====");
+            // console.log("==== chart clear waypoint up ====");
             clearTimeout(createChartsTimeout);
             destroyCharts();
         }
@@ -72,12 +74,12 @@ var chartsWaypointUp = new Waypoint({
     handler: function(direction){
         if(direction === "up")
         {
-            console.log("==== chart create waypoint up ====");
+            // console.log("==== chart create waypoint up ====");
             createChartsTimeout = setTimeout(createCharts,500);
         }
         else if(direction === "down")
         {
-            console.log("==== chart clear waypoint down ====");
+            // console.log("==== chart clear waypoint down ====");
             clearTimeout(createChartsTimeout);
             destroyCharts();
         }

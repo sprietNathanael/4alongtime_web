@@ -1,6 +1,6 @@
 <!--
     Site programmé avec le framework open-source Bootstrap.
-    Auteur : MOLLARET Thomas.
+    Auteurs : MOLLARET Thomas, Spriet Nathanaël
     Avril 2018, Tous droits réservés.
 -->
 
@@ -19,7 +19,7 @@
     <meta name="title" content="4 a Long time, une association à but non lucratif affrontant le dessert du 4L Trophy 2019 !">
     <!--Owner-->
     <meta name="owner" content="tom-mollaret@orange.fr">
-    <link rel="shortcut icon" type="image/ico" href="img/logo.png" />
+    <link rel="shortcut icon" type="image/ico" href="img/logo.jpg" />
 
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -32,16 +32,20 @@
 </head>
 
 <body>
-    <!--data-spy="scroll" data-target="#navbar" data-offset="10">-->
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-xl fixed-top smoothScroll" id="navbar">
+
+        <!-- Logos -->
         <div class="d-flex col-xl-3 col-lg-3 col-md-3 col-4 order-1">
             <a class="navbar-brand" href="#">
-                <img src="./img/logo-equipage.png" alt="4LTrophy" />
+                <img src="./img/logo-equipage.gif" alt="4LTrophy" />
                 <span class="alongtime">4aLongtime</span>
-                <img src="./img/logo_transp_inv.png" alt="4aLongTime" />
+                <img src="./img/logo_transp_inv.gif" alt="4aLongTime" />
             </a>
         </div>
+
+        <!-- Counter -->
         <span class="navbar-text mt-1 col-xl-3 col-lg-3 col-md-3 col-4 text-right order-2" id="timeCounter">
             J -
             <span id="counter_d"></span>
@@ -49,9 +53,13 @@
                     <span id="counter_m"></span> :
                     <span id="counter_s"></span> -->
         </span>
+
+        <!-- Links button -->
         <button class="navbar-toggler text-right order-3 col-2" type="button" data-toggle="collapse" data-target="#navbarCollapse">
             <i class="fa fa-bars"></i>
         </button>
+
+        <!-- Links -->
         <div class="navbar-collapse collapse text-right order-3 col-xl-6 col-12 pl-5" id="navbarCollapse">
             <ul class="nav nav-pills ml-auto">
                 <li class="nav-item">
@@ -76,6 +84,7 @@
         </div>
     </nav>
 
+    <!-- Content -->
     <section class="module parallax" id="greeting_parallax" data-type="background" data-speed-xxl="2" data-zoom-xxl="130" data-offset-xxl="0"
         data-speed-xl="3" data-zoom-xl="130" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="160" data-offset-lg="15" data-speed-md="2"
         data-zoom-md="185" data-offset-md="10" data-speed-smd="2" data-zoom-smd="200" data-offset-smd="30" data-speed-sm="2"
@@ -88,7 +97,6 @@
                 <span class="alongtime">4aLongtime</span>
             </h1>
             <h2>Une aventure humanitaire au volant d'une voiture mythique</h2>
-            <!-- <p id="buttonDownContainer"><a href="#presentation" id="buttonDown"><i class="fa fa-angle-double-down"></i></a></p> -->
         </div>
 
     </section>
@@ -151,11 +159,10 @@
         </div>
     </section>
 
-    <section class="module parallax" id="team" data-type="background" data-speed="2" data-speed-xxl="2" data-zoom-xxl="100"
-        data-offset-xxl="0" data-speed-xl="2" data-zoom-xl="100" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="100"
-        data-offset-lg="0" data-speed-md="2" data-zoom-md="130" data-offset-md="10" data-speed-smd="2" data-zoom-smd="150"
-        data-offset-smd="10" data-speed-sm="2" data-zoom-sm="170" data-offset-sm="15" data-speed-xs="2" data-zoom-xs="180"
-        data-offset-xs="20">
+    <section class="module parallax" id="team" data-type="background" data-speed="2" data-speed-xxl="2" data-zoom-xxl="100" data-offset-xxl="0"
+        data-speed-xl="2" data-zoom-xl="100" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="100" data-offset-lg="0" data-speed-md="2"
+        data-zoom-md="130" data-offset-md="10" data-speed-smd="2" data-zoom-smd="150" data-offset-smd="10" data-speed-sm="2"
+        data-zoom-sm="170" data-offset-sm="15" data-speed-xs="2" data-zoom-xs="180" data-offset-xs="20">
         <div class="imageContainer">
             <img src="img/IMG_3038-2.jpg" alt="">
         </div>
@@ -170,8 +177,8 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-12 row teamPart">
                     <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1" id="thomasImageContainer">
-                        <div class="imageCropper">
-                            <img src="./img/Thomas2.png" alt="thomas">
+                        <div class="imageCropper align-middle">
+                            <img src="./img/Thomas2.jpg" alt="thomas">
                         </div>
                     </div>
                     <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-6 offset-1">
@@ -190,7 +197,7 @@
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 col-12 row d-flex teamPart">
-                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1 order-xl-0 order-lg-0 order-1">
+                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1 order-xl-0 order-lg-0 order-1 align-middle">
                         <div class="imageCropper" id="nathanaelImageContainer">
                             <img src="./img/nathanael.jpg" alt="nathanael">
                         </div>
@@ -211,15 +218,16 @@
 
                 </div>
                 <div class="col-12 row teamPart">
-                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1" id="cpeImageContainer">
-                        <img src="./img/CPE.png" alt="CPE">
+                    <div class="col-xl-4 offset-xl-4 col-lg-4 offset-lg-4 col-4 offset-1" id="cpeImageContainer align-middle">
+                        <img src="./img/CPE.gif" alt="CPE">
                     </div>
                     <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-6 offset-1">
-                        <p>Nous sommes tous deux apprentis ingénieurs en 5è année à CPE - Lyon, dans la filière <em>Informatique
-                            et Réseaux de Communication</em>. L'apprentissage nous donne un regard nouveau sur nos études en nous
-                            permettant de mettre en application directe en entreprise ce que nous apprenons en cours. Cela
-                            nous apporte aussi de l'<em>autonomie</em> et de la <em>rigueur</em>, éléments essentiels pour évoluer dans le
-                            monde du travail.</p>
+                        <p>Nous sommes tous deux apprentis ingénieurs en 5è année à CPE - Lyon, dans la filière
+                            <em>Informatique et Réseaux de Communication</em>. L'apprentissage nous donne un regard nouveau sur
+                            nos études en nous permettant de mettre en application directe en entreprise ce que nous apprenons
+                            en cours. Cela nous apporte aussi de l'
+                            <em>autonomie</em> et de la
+                            <em>rigueur</em>, éléments essentiels pour évoluer dans le monde du travail.</p>
 
                     </div>
                 </div>
@@ -229,19 +237,21 @@
     </section>
 
     <section class="module parallax" id="team_3" data-type="background" data-speed="3" data-speed-xxl="2" data-zoom-xxl="100"
-        data-offset-xxl="0" data-speed-xl="2" data-zoom-xl="110" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="120"
-        data-offset-lg="10" data-speed-md="2" data-zoom-md="130" data-offset-md="15" data-speed-smd="2" data-zoom-smd="130" data-offset-smd="23"
+        data-offset-xxl="0" data-speed-xl="2" data-zoom-xl="110" data-offset-xl="0" data-speed-lg="2" data-zoom-lg="120" data-offset-lg="10"
+        data-speed-md="2" data-zoom-md="130" data-offset-md="15" data-speed-smd="2" data-zoom-smd="130" data-offset-smd="23"
         data-speed-sm="2" data-zoom-sm="180" data-offset-sm="30" data-speed-xs="2" data-zoom-xs="220" data-offset-xs="25">
         <div class="imageContainer">
             <img src="img/eva.jpg" alt="">
         </div>
         <div class="jumbotron jumbotron-large">
             <h3>Éva</h3>
-            <p>Le troisième membre (et non des moindres !) de l'équipage, c'est Éva ! La jeune <em>4L Clan</em> soufflera ses 30 bougies
-                l'année prochaine. Née en <em>1989</em> dans les usines Cléon, elle fait partie des plus puissantes 4L avec un moteur
-                <em>1108cm3</em> (pour 34 chevaux). Elle fut d'abord blanche, puis bleue, elle est maintenant rouge ! L'année prochaine
-                sera sa <em>troisième participation</em> au 4L Trophy, et elle y est déjà bien préparée. Il lui faudra malgré tout
-                une petite visite chez le garagiste pour quelques travaux et vérifications. </p>
+            <p>Le troisième membre (et non des moindres !) de l'équipage, c'est Éva ! La jeune
+                <em>4L Clan</em> soufflera ses 30 bougies l'année prochaine. Née en
+                <em>1989</em> dans les usines Cléon, elle fait partie des plus puissantes 4L avec un moteur
+                <em>1108cm3</em> (pour 34 chevaux). Elle fut d'abord blanche, puis bleue, elle est maintenant rouge ! L'année
+                prochaine sera sa
+                <em>troisième participation</em> au 4L Trophy, et elle y est déjà bien préparée. Il lui faudra malgré tout une
+                petite visite chez le garagiste pour quelques travaux et vérifications. </p>
         </div>
     </section>
 
@@ -278,10 +288,9 @@
     </section>
 
     <section class="module parallax" id="media" data-type="background" data-speed="2" data-speed-xxl="2" data-zoom-xxl="100"
-        data-offset-xxl="0" data-speed-xl="2" data-zoom-xl="130" data-offset-xl="10" data-speed-lg="2" data-zoom-lg="150"
-        data-offset-lg="0" data-speed-md="2" data-zoom-md="180" data-offset-md="30" data-speed-smd="2" data-zoom-smd="175"
-        data-offset-smd="30" data-speed-sm="2" data-zoom-sm="250" data-offset-sm="25" data-speed-xs="2" data-zoom-xs="270"
-        data-offset-xs="40">
+        data-offset-xxl="0" data-speed-xl="2" data-zoom-xl="130" data-offset-xl="10" data-speed-lg="2" data-zoom-lg="150" data-offset-lg="0"
+        data-speed-md="2" data-zoom-md="180" data-offset-md="30" data-speed-smd="2" data-zoom-smd="175" data-offset-smd="30"
+        data-speed-sm="2" data-zoom-sm="250" data-offset-sm="25" data-speed-xs="2" data-zoom-xs="270" data-offset-xs="40">
         <div class="imageContainer">
             <img src="img/trophy_4l_09.jpg" alt="">
         </div>
@@ -313,12 +322,13 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 offset-xl-1 col-lg-7 offset-lg-0 col-8 offset-2">
-                    <img src="./img/encarts_2.png" alt="decoupage">
+                    <img src="./img/encarts_2.gif" alt="decoupage">
                 </div>
                 <div class="col-xl-4 offset-xl-0 col-lg-5 offset-lg-0 col-10 offset-1">
                     <h3>Sponsorisation</h3>
-                    <p>Pour nous permettre de compléter notre budget, nous vous proposons d'afficher <em>votre entreprise</em> à la fois
-                        sur notre site internet, sur nos réseaux sociaux, mais surtout <em>directement sur la 4L</em> !</p>
+                    <p>Pour nous permettre de compléter notre budget, nous vous proposons d'afficher
+                        <em>votre entreprise</em> à la fois sur notre site internet, sur nos réseaux sociaux, mais surtout
+                        <em>directement sur la 4L</em> !</p>
                     <p>Il y a plusieurs emplacements disponibles, sur toutes les faces de la voiture.</p>
                 </div>
             </div>
@@ -341,7 +351,8 @@
                                     <img class="d-block w-100" src="./img/carbonbeeLogo3.jpg" alt="First slide">
                                     <div class="carousel-caption d-none d-md-block">
                                         <h5>Carbon Bee</h5>
-                                        <p>CarbonBee développe une camera hyperspectrale pour les drones agricoles, robots agricoles, et cameras pour tracteurs.</p>
+                                        <p>CarbonBee développe une camera hyperspectrale pour les drones agricoles, robots agricoles,
+                                            et cameras pour tracteurs.</p>
                                     </div>
                                 </a>
                                 </a>
@@ -371,8 +382,7 @@
     <section class="module parallax" id="contact" data-type="background" data-speed="3" data-speed-xxl="2" data-zoom-xxl="100"
         data-offset-xxl="-15" data-speed-xl="2" data-zoom-xl="100" data-offset-xl="-10" data-speed-lg="4" data-zoom-lg="100"
         data-offset-lg="-15" data-speed-md="4" data-zoom-md="100" data-offset-md="-5" data-speed-smd="4" data-zoom-smd="100"
-        data-offset-smd="0" data-speed-sm="4" data-zoom-sm="100" data-offset-sm="0" data-speed-xs="4" data-zoom-xs="100"
-        data-offset-xs="5">
+        data-offset-smd="0" data-speed-sm="4" data-zoom-sm="100" data-offset-sm="0" data-speed-xs="4" data-zoom-xs="100" data-offset-xs="5">
         <div class="imageContainer">
             <img src="img/trophy_4l_11.jpg" alt="">
         </div>
@@ -381,6 +391,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <section class="module content" id="contact_2">
         <div class="container-fluid">
             <div class="row">
@@ -394,7 +405,7 @@
                     </p>
                 </div>
                 <div class="col-xl-2 col-4 align-middle vcenter">
-                    <img src="./img/logo_transp_inv.png" alt="logo">
+                    <img src="./img/logo_transp_inv.gif" alt="logo">
                 </div>
                 <div class="col-xl-3 col-4 align-middle vcenter">
                     <p>Copiright
@@ -404,22 +415,22 @@
         </div>
     </section>
 
+    <!-- Scroll to top button -->
     <button onclick="scrollToTop()" id="scrollTopButton" title="Go to top">
         <i class="fa fa-angle-up"></i>
     </button>
 
 
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/customMaps.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/chartjs.min.js"></script>
     <script src="./js/chart.js"></script>
     <script src="./js/jquery.waypoints.min.js"></script>
     <script src="./js/parallax.js"></script>
     <script src="./js/waypoints.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANwYe9IyEgorlF7ko4nYJQTbEN-so9Peg&callback=initMap"></script>
     <script src="./js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANwYe9IyEgorlF7ko4nYJQTbEN-so9Peg&callback=initMap" async
-        defer></script>
-    <script src="./js/customMaps.js"></script>
 </body>
 
 </html>

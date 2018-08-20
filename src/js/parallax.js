@@ -3,65 +3,62 @@ var mobileCoeff;
 //parallax js
 function parallaxInit(){
     var $window = $(window);
-    mobileCoeff = mobileUsed ? 1 : 1;
     $('section[data-type="background"]').each(function () {
-        var $bgobj = $(this); // assigning the object
-        parallaxApply($bgobj, $window);
+        var currentElement = $(this); // assigning the object
+        parallaxApply(currentElement, $window);
         $(window).scroll(function () {
-            parallaxApply($bgobj, $window);
+            parallaxApply(currentElement, $window);
         });
     });
 };
 
-function parallaxApply($bgobj, $window){
+function parallaxApply(currentElement, $window){
     if($window.width() >= 1600) {
-        console.log("xxl : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-xxl');
-        zoom = $bgobj.data('zoom-xxl');
-        speed = $bgobj.data('speed-xxl');
+        // console.log("xxl : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-xxl');
+        zoom = currentElement.data('zoom-xxl');
+        speed = currentElement.data('speed-xxl');
     }
     else if($window.width() >= 1200) {
-        console.log("xl : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-xl');
-        zoom = $bgobj.data('zoom-xl');
-        speed = $bgobj.data('speed-xl');
+        // console.log("xl : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-xl');
+        zoom = currentElement.data('zoom-xl');
+        speed = currentElement.data('speed-xl');
     }
     else if($window.width() >= 992) {
-        console.log("lg : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-lg');
-        zoom = $bgobj.data('zoom-lg')
-        speed = $bgobj.data('speed-lg');
+        // console.log("lg : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-lg');
+        zoom = currentElement.data('zoom-lg')
+        speed = currentElement.data('speed-lg');
     }
     else if($window.width() >= 768) {
-        console.log("md : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-md');
-        zoom = $bgobj.data('zoom-md');
-        speed = $bgobj.data('speed-md');
+        // console.log("md : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-md');
+        zoom = currentElement.data('zoom-md');
+        speed = currentElement.data('speed-md');
     }
     else if($window.width() >= 650) {
-        console.log("smd : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-smd');
-        zoom = $bgobj.data('zoom-smd');
-        speed = $bgobj.data('speed-smd');
+        // console.log("smd : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-smd');
+        zoom = currentElement.data('zoom-smd');
+        speed = currentElement.data('speed-smd');
     }
     else if($window.width() >= 576) {
-        console.log("sm : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-sm');
-        zoom = $bgobj.data('zoom-sm');
-        speed = $bgobj.data('speed-sm');
+        // console.log("sm : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-sm');
+        zoom = currentElement.data('zoom-sm');
+        speed = currentElement.data('speed-sm');
     }
     else{
-        console.log("xs : "+$(window).width()+" / "+$(window).height());
-        offset = $bgobj.data('offset-xs');
-        zoom = $bgobj.data('zoom-xs');
-        speed = $bgobj.data('speed-xs');
+        // console.log("xs : "+$(window).width()+" / "+$(window).height());
+        offset = currentElement.data('offset-xs');
+        zoom = currentElement.data('zoom-xs');
+        speed = currentElement.data('speed-xs');
     }
-    // offset = $bgobj.data('offset1200');
 
-    var yPos = speed ? mobileCoeff*((($window.scrollTop()-$bgobj.position().top )/ speed)+((offset/100)*$bgobj.width())) : (offset/100)*$bgobj.width() ;
-    // var yPos = (offset/100)*$bgobj.width();
+    var yPos = speed ? ((($window.scrollTop()-currentElement.position().top )/ speed)+((offset/100)*currentElement.width())) : (offset/100)*currentElement.width() ;
 
-    var img = $($bgobj.find(".imageContainer img")[0]);
+    var img = $(currentElement.find(".imageContainer img")[0]);
     zoom = zoom/ 100;
 
     img.css({

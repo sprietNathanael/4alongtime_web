@@ -1,3 +1,4 @@
+// The custom style
 styles = [{
         "elementType": "geometry",
         "stylers": [{
@@ -167,6 +168,7 @@ styles = [{
 
 var markers = [];
 
+// The trip coordinates
 var tripStep = [{
         lat: 45.764043,
         lng: 4.835658999999964,
@@ -184,7 +186,7 @@ var tripStep = [{
     {
         lat: 36.1407591,
         lng: -5.4562329999999974,
-        title: "Algéciras",
+        title: "Algésiras",
         icon: "http://maps.google.com/mapfiles/ms/micons/ferry.png"
     },
     {
@@ -230,6 +232,7 @@ var tripStep = [{
 
 ];
 
+// The symbol for line
 var lineSymbol = {
     path: "M 0,-1 0,1 z M 2,-1 2,1",
     strokeOpacity: 1,
@@ -250,6 +253,7 @@ function initMap() {
         mapTypeId: 'terrain'
     });
 
+    // Add the line
     tripPath = new google.maps.Polyline({
         path: [],
         geodesic: true,
@@ -266,6 +270,7 @@ function initMap() {
     });
 }
 
+// Add markers
 function addMarker(step) {
     console.log("Add marker");
     intMarker = new google.maps.Marker({
@@ -320,23 +325,3 @@ function clearMapsMarkers() {
 function dropMarkersOnce() {
     dropMapMarkers(250);
 }
-
-
-/*for(i = 0; i < markers.length; i++)
-
-{
-    if(markers[i].desc !== undefined)
-    {
-        markers[i].infoWindow = new google.maps.InfoWindow({
-            content: "<div id='content'><div id='siteNotice'></div><h1 id='firstHeading' class='firstHeading'>"+
-            markers[i].title+
-            "</h1><div class='bodyContent'>"+
-            markers[i].desc+
-            "</div></div>"
-        })
-        markers[i].addListener('click', function(){
-            console.log("test");
-            markers[i].infoWindow.open(map, markers[i]);
-        });
-    }
-}*/
