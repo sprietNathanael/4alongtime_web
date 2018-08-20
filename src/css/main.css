@@ -1,11 +1,11 @@
 @font-face {
     font-family: digital7;
-    src: url(../fonts/digital-7.ttf);
+    src: url(../fonts/digital-7.woff2);
 }
 
 @font-face {
     font-family: papyrus;
-    src: url(../fonts/papyrus.ttf);
+    src: url(../fonts/papyrus.woff2);
 }
 
 html {
