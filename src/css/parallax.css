@@ -34,6 +34,9 @@ section.module p:last-child {
 section.module.content {
     padding: 40px 0;
     /* background-color: rgba(207, 216, 220, 0.5); */
+    z-index:  1000;
+    position:  relative;
+    box-shadow: 0px -9px 20px 0px rgba(66, 66, 66, 0.4), 0px 9px 20px 0px rgba(66, 66, 66, 0.4);
 }
 
 section.module.content:last-child {
@@ -75,10 +78,6 @@ section.module.parallax h3 {
     text-align: center;
     /* text-transform: uppercase; */
     text-shadow: 0 0 10px black;
-}
-
-body{
-    background: rgba(207, 216, 220, 0.5);
 }
 
 .parallax .jumbotron {
@@ -131,6 +130,7 @@ body{
 
 #presentation img{
     width: 100%;
+    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
 }
 
 #team_2 img{
@@ -199,6 +199,7 @@ body{
 #carouselIndicators{
     min-width: 436px;
     background:  white;
+    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
 }
 
 #carouselIndicators .carousel-indicators li{
