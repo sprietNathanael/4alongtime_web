@@ -1,4 +1,4 @@
-var endDate = new Date("02-20-2019 23:00:00");
+var endDate = new Date("2019-02-21T23:00:00");
 
 $(document).ready(function () {
     parallaxInit();

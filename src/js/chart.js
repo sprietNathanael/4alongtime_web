@@ -23,7 +23,7 @@ function createProgressChart(){
     var ctx = document.getElementById("progressChart").getContext('2d');
     data = {
         datasets: [{
-            data: [1000, 9000],
+            data: [3000, 7000],
             backgroundColor: [
                 '#FF5151',
                 '#DDDDDD',
