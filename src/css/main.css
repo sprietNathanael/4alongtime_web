@@ -1,3 +1,7 @@
+/* ============================================================
+FONTS
+============================================================ */
+
 @font-face {
     font-family: digital7;
     src: url(../fonts/digital-7.woff2);
@@ -7,6 +11,10 @@
     font-family: papyrus;
     src: url(../fonts/papyrus.woff2);
 }
+
+/* ============================================================
+GENERAL
+============================================================ */
 
 html {
     position: relative;
@@ -18,6 +26,8 @@ body {
     position: relative;
 }
 
+/* Body Background*/
+
 body:before {
     content: "";
     position: absolute;
@@ -26,28 +36,40 @@ body:before {
     z-index: -1;
     display: block;
     background-image: url(../img/Background.jpg);
-    /* background-size: cover; */
     width: 100%;
     height: 100%;
-    /* -webkit-filter: blur(5px); */
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    /* filter: blur(1px); */
-    /* background: rgba(207, 216, 220, 0.5); */
-    /* filter:  grayscale(90%); */
+    -webkit-filter: contrast(75%);
+    -moz-filter: contrast(75%);
+    -o-filter: contrast(75%);
+    -ms-filter: contrast(75%);
     filter: contrast(75%);
 }
 
-#map {
-    height: 450px;
-    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
-}
+/* Change the fonts of 4alongtime mention */
 
 .alongtime {
     font-weight: normal;
     font-family: papyrus;
 }
+
+/* Color in red all emphasis words */
+
+em {
+    color: #fb1616;
+    font-style: inherit;
+    font-weight: bold;
+}
+
+.vcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+/* ============================================================
+NAVBAR
+============================================================ */
 
 .navbar {
     background: transparent;
@@ -62,18 +84,16 @@ body:before {
     width: 18%;
 }
 
+.navbar-brand a:hover {
+    text-decoration: none;
+}
+
 .navbar-toggler {
     color: white;
 }
 
 .nav-pills .nav-link.active {
     background: rgba(255, 0, 0, 0.267);
-}
-
-em {
-    color: #fb1616;
-    font-style: inherit;
-    font-weight: bold;
 }
 
 .navbar a {
@@ -83,6 +103,107 @@ em {
 .navbar.compressed {
     background: rgba(0, 0, 0, 0.75);
     padding-top: 0px;
+}
+
+#timeCounter {
+    font-family: "digital7";
+    font-size: 2em;
+    margin: 0;
+}
+
+/* ============================================================
+SHADOWS AND IMAGES
+============================================================ */
+
+#presentation img {
+    width: 100%;
+    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#team_2 img {
+    width: 100%;
+}
+
+#team_2 .imageCropper {
+    width: 100%;
+    /* height: 100%; */
+    padding-top: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+#team_2 .imageCropper img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#team_2 #thomasImageContainer img {
+    width: 102%;
+    transform: translate(0%, -3%);
+}
+
+#team_2 #nathanaelImageContainer img {
+    width: 101%;
+    transform: translate(0%, -21%);
+}
+
+#sponsor img {
+    width: 100%;
+}
+
+#map {
+    height: 450px;
+    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+CAROUSEL
+============================================================ */
+
+#carouselIndicators {
+    min-width: 436px;
+    background: white;
+    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
+}
+
+#carouselIndicators .carousel-indicators li {
+    /* border: 1px solid black; */
+}
+
+.carousel-caption {
+    background: #3a3a3ac7;
+    border-radius: 22px;
+}
+
+/* ============================================================
+FOOTER
+============================================================ */
+
+#contact_2 {
+    background: rgb(39, 39, 39);
+    color: white;
+    padding: 10px;
+}
+
+#contact_2 img {
+    width: 100%;
+}
+
+#contact_2 a {
+    color: #fb1616;
+}
+
+#facebookIcon {
+    color: #3A559F;
+    background-color: #FFFFFF;
+    line-height: 0.7;
 }
 
 #scrollTopButton {
@@ -105,35 +226,31 @@ em {
     background-color: #555;
 }
 
-#timeCounter {
-    font-family: "digital7";
-    font-size: 2em;
-    margin: 0;
+/* ============================================================
+SPECIFIC CASES
+============================================================ */
+
+.teamPart {
+    padding: 1% 0;
 }
 
-#buttonDown {
-    color: #ffffffb5;
-    font-size: 6em;
-}
-
-#buttonDownContainer {
-    width: 100%;
+#team_2 p {
+    font-style: italic;
+    font-weight: bold;
     text-align: center;
-    position: absolute;
-    bottom: 0px;
 }
 
-#buttonDown i {
-    transform: scale(1, 1);
+#team_2 h3 {
+    padding-top: 1%;
+    padding-bottom: 3%;
+    text-align: center;
 }
 
-.carousel-caption {
-    background: #3a3a3ac7;
-    border-radius: 22px;
+#budget .textContainer {
+    padding-top: 3%;
 }
 
-#facebookIcon {
-    color: #3A559F;
-    background-color: #FFFFFF;
-    line-height: 0.7;
+#sponsor h3 {
+    padding-top: 5%;
+    padding-bottom: 8%;
 }

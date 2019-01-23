@@ -1,5 +1,5 @@
 /* ============================================================
-  PRIMARY STRUCTURE
+PRIMARY STRUCTURE
 ============================================================ */
 
 .parallax-container {
@@ -8,7 +8,7 @@
 }
 
 /* ============================================================
-  SECTIONS
+SECTIONS
 ============================================================ */
 
 section.module:last-child {
@@ -17,7 +17,6 @@ section.module:last-child {
 
 section.module h2 {
     margin-bottom: 40px;
-    /* font-family: "Roboto Slab", serif; */
     font-size: 30px;
 }
 
@@ -34,8 +33,8 @@ section.module p:last-child {
 section.module.content {
     padding: 40px 0;
     /* background-color: rgba(207, 216, 220, 0.5); */
-    z-index:  1000;
-    position:  relative;
+    z-index: 1000;
+    position: relative;
     box-shadow: 0px -9px 20px 0px rgba(66, 66, 66, 0.4), 0px 9px 20px 0px rgba(66, 66, 66, 0.4);
 }
 
@@ -57,7 +56,7 @@ section.module.parallax h1 {
     text-align: center;
     /* text-transform: uppercase; */
     text-shadow: 0 0 4px black;
-    margin-bottom:  7%;
+    margin-bottom: 7%;
 }
 
 section.module.parallax h2 {
@@ -81,147 +80,51 @@ section.module.parallax h3 {
 }
 
 .parallax .jumbotron {
-    width:50%;
+    width: 50%;
     background: rgba(37, 37, 37, 0.84);
-    color:  white;
+    color: white;
     margin-left: 5%;
     border-radius: 45px;
-    position:  relative;
+    position: relative;
 }
 
 .parallax .jumbotron-large {
-    width:75%;
+    width: 75%;
     background: rgba(37, 37, 37, 0.84);
-    color:  white;
+    color: white;
     margin-left: 5%;
     border-radius: 45px;
 }
 
-.module.parallax[data-type="background"] .imageContainer
-{
+.module.parallax[data-type="background"] .imageContainer {
     position: absolute;
     top: 0px;
     height: 100%;
     width: 100%;
-    overflow:  hidden;
+    overflow: hidden;
 }
 
-.module.parallax[data-type="background"] .imageContainer img
-{
+.module.parallax[data-type="background"] .imageContainer img {
     width: 100%;
-    position:  absolute;
+    position: absolute;
     top: 0px;
 }
 
-.vcenter{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    flex-flow: column;
-}
-
-#greeting_parallax{
+#greeting_parallax {
     padding: 40vh 0;
 }
 
-.parallax-container{
+.parallax-container {
     position: relative;
 }
 
-#presentation img{
-    width: 100%;
-    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
-}
-
-#team_2 img{
-    width: 100%;
-}
-
-#team_2 .imageCropper{
-    width: 100%;
-    /* height: 100%; */
-    padding-top:  100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 100%;
-}
-
-#team_2 .imageCropper img{
-    display: inline;
-    margin: 0 auto;
-    height:  auto;
-    position:  absolute;
-    top: 0;
-    bottom:  0;
-    left:  0;
-    right:  0;
-}
-
-#team_2 #thomasImageContainer img{
-    width: 102%;
-    transform: translate(0%,-3%);
-}
-
-#team_2 #nathanaelImageContainer img{
-    width: 101%;
-    transform: translate(0%,-21%);
-}
-
-.teamPart{
-    padding: 1% 0;
-}
-
-#team_2 p {
- font-style: italic;
- font-weight:  bold;
- text-align:  center;
-}
-
-#team_2 h3 {
-    padding-top: 1%;
-    padding-bottom: 3%;
-    text-align:  center;
-}
-
-#budget .textContainer{
-    padding-top: 3%;
-}
-
-#sponsor img{
-    width: 100%;
-}
-
-#sponsor h3 {
-    padding-top: 5%;
-    padding-bottom: 8%;
-}
-
-#carouselIndicators{
-    min-width: 436px;
-    background:  white;
-    box-shadow: 10px 10px 8px 1px rgba(0, 0, 0, 0.3);
-}
-
-#carouselIndicators .carousel-indicators li{
-    /* border: 1px solid black; */
-}
-
-#contact_2{
-    background: rgb(39, 39, 39);
-    color: white;
-    padding: 10px;
-}
-
-#contact_2 img{
-    width: 100%;
-}
-#contact_2 a{
-
-    color: #fb1616;
-}
+/* ============================================================
+MEDIA QUERIES
+============================================================ */
 
 @media all and (max-width: 576px) {
-    .parallax .jumbotron, .parallax .jumbotron-large {
+    .parallax .jumbotron,
+    .parallax .jumbotron-large {
         width: 90%;
     }
     section.module.parallax {
@@ -230,8 +133,9 @@ section.module.parallax h3 {
 }
 
 @media all and (min-width: 576px) {
-    .parallax .jumbotron, .parallax .jumbotron-large {
-        width:75%;
+    .parallax .jumbotron,
+    .parallax .jumbotron-large {
+        width: 75%;
     }
     section.module.parallax {
         padding: 75px 0;
@@ -239,13 +143,15 @@ section.module.parallax h3 {
 }
 
 @media all and (min-width: 768px) {
-    .parallax .jumbotron, .parallax .jumbotron-large {
-        width:75%;
+    .parallax .jumbotron,
+    .parallax .jumbotron-large {
+        width: 75%;
     }
     section.module.parallax {
         padding: 100px 0;
     }
 }
+
 @media all and (min-width: 992px) {
     section.module h2 {
         font-size: 42px;
@@ -265,8 +171,9 @@ section.module.parallax h3 {
     section.module.parallax h3 {
         font-size: 96px;
     }
-    section.module.parallax.parallax .jumbotron, .parallax .jumbotron-large {
-        width:75%;
+    section.module.parallax.parallax .jumbotron,
+    .parallax .jumbotron-large {
+        width: 75%;
     }
 }
 
@@ -290,48 +197,9 @@ section.module.parallax h3 {
         font-size: 96px;
     }
     section.module.parallax.parallax .jumbotron {
-        width:50%;
+        width: 50%;
     }
-
     section.module.parallax.parallax .jumbotron-large {
-        width:75%;
-    }
-
-
-}
-
-
-/*
-@media all and (min-width: 600px) {
-    section.module h2 {
-        font-size: 42px;
-    }
-    section.module p {
-        font-size: 20px;
-    }
-    section.module.parallax {
-        padding: 300px 0;
-    }
-    section.module.parallax h1 {
-        font-size: 96px;
-    }
-    section.module.parallax h2 {
-        font-size: 40px;
-    }
-    section.module.parallax h3 {
-        font-size: 96px;
+        width: 75%;
     }
 }
-
-@media all and (min-width: 960px) {
-    section.module.parallax h1 {
-        font-size: 90px;
-        margin-bottom:  7%;
-    }
-    section.module.parallax h2 {
-        font-size: 30px;
-    }
-    section.module.parallax h3 {
-        font-size: 90px;
-    }
-}*/
